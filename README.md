@@ -1,2 +1,2 @@
 # JanneSimonGame
-Simon Like Game, in the process of completing the FreeCodeCamp challenges
+A game based on the popular game simon, in the process of completing the FreeCodeCamp challenges
