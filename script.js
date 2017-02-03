@@ -54,6 +54,7 @@ function lightUp(tile) {
 }
 
 
-newRound();
+$('#start').click(newRound);
+
 
 });
