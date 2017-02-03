@@ -92,12 +92,3 @@ select {
 	top:1px;
   text-decoration: none;
 }
-#lit {
-  background-color: black;
-}
-.buttonOneLit {
-  height: 350px;
-  width: 350px;
-  background-color: rgb(255, 108, 108);
-  margin-left: -2.1%;
-}
