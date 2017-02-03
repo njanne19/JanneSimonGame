@@ -23,7 +23,7 @@ body{
   height: 350px;
   width: 350px;
   background-color: rgb(255, 64, 64);
-  margin-left: -2.1%;
+  margin-left: -2.2%;
 }
 .buttonTwo {
   height: 350px;
@@ -37,7 +37,7 @@ body{
   height: 350px;
   width: 350px;
   background-color: rgb(242, 255, 0);
-  margin-left: -2.1%;
+  margin-left: -2.2%;
 }
 .buttonFour {
   height: 350px;
@@ -91,4 +91,18 @@ select {
 	position:relative;
 	top:1px;
   text-decoration: none;
+}
+
+
+#buttonOneHit {
+  background-color: rgb(255, 113, 113);
+}
+#buttonTwoHit {
+  background-color: rgb(70, 155, 255);
+}
+#buttonThreeHit {
+  background-color: rgb(241, 247, 120);
+}
+#buttonFourHit {
+  background-color: rgb(80, 255, 124);
 }
