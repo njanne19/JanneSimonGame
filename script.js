@@ -20,7 +20,7 @@ var sequence = [1];
 var playerSequence = [];
 
 function newRound() {
-sequence.push(Math.floor(Math.random() * 4));
+ sequence.push(Math.floor(Math.random() * 4));
  animate(sequence);
 }
 function animate(sequence) {
