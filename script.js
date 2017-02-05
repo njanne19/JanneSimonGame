@@ -20,8 +20,6 @@ var sequence = [Math.floor(Math.random() * 4 + 1)];
 var playerSequence = [];
 
 function newRound() {
-console.log(playerSequence);
-console.log(sequence);
  sequence.push(Math.floor(Math.random() * 4 + 1));
  animate(sequence);
 }
@@ -40,15 +38,23 @@ function lightUp(tile) {
   switch(tile) {
     case 1:
     rightBlock = 'buttonOneHit';
+    var audio = new Audio('simonSound1.mp3');
+    audio.play();
     break;
     case 2:
     rightBlock = 'buttonTwoHit';
+    var audio = new Audio('simonSound2.mp3');
+        audio.play();
     break;
     case 3:
     rightBlock = 'buttonThreeHit';
+    var audio = new Audio('simonSound3.mp3');
+        audio.play();
     break;
     case 4:
     rightBlock = 'buttonFourHit';
+    var audio = new Audio('simonSound4.mp3');
+        audio.play();
     break;
   }
  var $tile = $('[data-tile=' + tile + ']').attr('id', rightBlock);
@@ -62,26 +68,26 @@ animate(sequence);
 $('.buttonOne').click(function() {
   lightUp(1);
   playerSequence.push(1);
-  check();
+  setTimeout(check(), 3000);
 });
 $('.buttonTwo').click(function() {
   lightUp(2);
   playerSequence.push(2);
-  check();
+  setTimeout(check(), 3000);
 });
 $('.buttonThree').click(function() {
   lightUp(3);
   playerSequence.push(3)
-  check();
+  setTimeout(check(), 3000);
 });
 $('.buttonFour').click(function() {
   lightUp(4);
   playerSequence.push(4)
-  check();
+  setTimeout(check(), 3000);
 });
 function check() {
 while (playerSequence.length != sequence.length) {
-  return;
+  setTimeout(check(), 3000);
 }
 if (playerSequence[playerSequence.length-1] == sequence[sequence.length-1]) {
   playerSequence = [];
@@ -91,7 +97,14 @@ if (playerSequence[playerSequence.length-1] == sequence[sequence.length-1]) {
   lightUp(2);
   lightUp(3);
   lightUp(4);
-  setTimeout(animate(sequence), 3000);
+  if (document.getElementById("mySelect").selectedIndex() = "0") {
+  playerSequence = [];
+  animate(sequence);
+} else if (document.getElementById("mySelect").selectedIndex() = "1") {
+  playerSequence = [];
+  sequence = [math.floor(Math.random() * 4 + 1)];
+  animate(sequence);
+}
 
 }
 
