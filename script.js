@@ -20,7 +20,7 @@ var sequence = [Math.floor(Math.random() * 4 + 1)];
 var playerSequence = [];
 
 function newRound() {
-  if (eval($('.counter').text()) == 3) {
+  if (eval($('.counter').text()) == 20) {
     $('.fullGame').remove();
     $('.title').remove();
     $('.winScreen').attr('id', 'winScreenLit');
