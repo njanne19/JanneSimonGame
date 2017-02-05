@@ -91,22 +91,24 @@ while (playerSequence.length != sequence.length) {
 }
 if (playerSequence[playerSequence.length-1] == sequence[sequence.length-1]) {
   playerSequence = [];
-  newRound();
+  counter();
+  setTimeout(newRound, 300);
 } else {
   lightUp(1);
   lightUp(2);
   lightUp(3);
   lightUp(4);
-  if (document.getElementById("mySelect").selectedIndex() = "0") {
   playerSequence = [];
   animate(sequence);
-} else if (document.getElementById("mySelect").selectedIndex() = "1") {
-  playerSequence = [];
-  sequence = [math.floor(Math.random() * 4 + 1)];
-  animate(sequence);
+}
+function counter () {
+  if ($('.counter').text() == "--") {
+    $('.counter').text('1');
+  } else {
+    $('.counter').text(eval($('.counter').text()) + 1);
+  }
 }
 
-}
 
 }
 
