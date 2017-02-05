@@ -92,6 +92,11 @@ while (playerSequence.length != sequence.length) {
 if (playerSequence[playerSequence.length-1] == sequence[sequence.length-1]) {
   playerSequence = [];
   counter();
+  if (eval($('.counter').text()) == 3) {
+    $(document).remove('.fullGame');
+    $('.winScreen').attr('id', 'winScreenLit');
+    launchFireworks();
+  }
   setTimeout(newRound, 300);
 } else {
   lightUp(1);
