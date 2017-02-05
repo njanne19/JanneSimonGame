@@ -20,6 +20,9 @@ function launchFireworks () {
     canvas.height = SCREEN_HEIGHT;
     setInterval(launch, 800);
     setInterval(loop, 1000 / 50);
+    $("h1").append("Congragulations! You won the game!").addClass('.text-center').attr('id', winScreenLit);
+    var audio = new Audio('celebrate.mp3');
+        audio.play();
 }
 
 // update mouse position
