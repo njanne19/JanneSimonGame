@@ -98,6 +98,12 @@ if (playerSequence[playerSequence.length-1] == sequence[sequence.length-1]) {
   lightUp(2);
   lightUp(3);
   lightUp(4);
+  if ((document.getElementById("mySelect").selectedIndex) == 1) {
+    playerSequence = [];
+    $('.counter').text('--');
+    sequence = [];
+    newRound();
+  }
   playerSequence = [];
   animate(sequence);
 }
