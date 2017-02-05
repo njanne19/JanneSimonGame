@@ -16,11 +16,13 @@ $('div.buttonFour').attr('id', 'buttonFourHit');
 $(document).ready(function() {
 
 
-var sequence = [1];
+var sequence = [Math.floor(Math.random() * 4 + 1)];
 var playerSequence = [];
 
 function newRound() {
- sequence.push(Math.floor(Math.random() * 4));
+console.log(playerSequence);
+console.log(sequence);
+ sequence.push(Math.floor(Math.random() * 4 + 1));
  animate(sequence);
 }
 function animate(sequence) {
@@ -78,7 +80,11 @@ $('.buttonFour').click(function() {
   check();
 });
 function check() {
-if (playerSequence > 0 && playerSequence[playerSequence.length-1] == sequence[sequence.length-1]) {
+while (playerSequence.length != sequence.length) {
+  return;
+}
+if (playerSequence[playerSequence.length-1] == sequence[sequence.length-1]) {
+  playerSequence = [];
   newRound();
 } else {
   lightUp(1);
@@ -86,8 +92,11 @@ if (playerSequence > 0 && playerSequence[playerSequence.length-1] == sequence[se
   lightUp(3);
   lightUp(4);
   setTimeout(animate(sequence), 3000);
+
 }
+
 }
+
 console.log(playerSequence);
 });
 
