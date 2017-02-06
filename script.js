@@ -1,4 +1,4 @@
-function buttonOneHit () {
+/* function buttonOneHit () {
 $('div.buttonOne').attr('id', 'buttonOneHit');
 }
 
@@ -12,6 +12,21 @@ $('div.buttonThree').attr('id', 'buttonThreeHit');
 
 function buttonFourHit () {
 $('div.buttonFour').attr('id', 'buttonFourHit');
+} */
+function buttonOneHit () {
+lightUp(1);
+}
+
+function buttonTwoHit () {
+lightUp(2);
+}
+
+function buttonThreeHit () {
+lightUp(3);
+}
+
+function buttonFourHit () {
+lightUp(4);
 }
 $(document).ready(function() {
 
@@ -20,6 +35,23 @@ var sequence = [Math.floor(Math.random() * 4 + 1)];
 var playerSequence = [];
 
 function newRound() {
+  ///////
+  function buttonOneHit () {
+  lightUp(1);
+  }
+
+  function buttonTwoHit () {
+  lightUp(2);
+  }
+
+  function buttonThreeHit () {
+  lightUp(3);
+  }
+
+  function buttonFourHit () {
+  lightUp(4);
+  }
+  /////////
   if (eval($('.counter').text()) == 20) {
     $('.fullGame').remove();
     $('.title').remove();
