@@ -52,7 +52,7 @@ function newRound() {
   lightUp(4);
   }
   /////////
-  if (eval($('.counter').text()) == 20) {
+  if (eval($('.counter').text()) == 3) {
     $('.fullGame').remove();
     $('.title').remove();
     $('.winScreen').attr('id', 'winScreenLit');
@@ -127,7 +127,7 @@ $('.buttonFour').click(function() {
 });
 function check() {
 while (playerSequence.length != sequence.length) {
-  setTimeout(check(), 3000);
+  return;
 }
 if (playerSequence[playerSequence.length-1] == sequence[sequence.length-1]) {
   playerSequence = [];
@@ -138,14 +138,15 @@ if (playerSequence[playerSequence.length-1] == sequence[sequence.length-1]) {
   lightUp(2);
   lightUp(3);
   lightUp(4);
-  if ((document.getElementById("mySelect").selectedIndex) == 1) {
+  if ($( "#mySelect option:selected" ).index() == 1) {
     playerSequence = [];
     $('.counter').text('--');
-    sequence = [];
-    newRound();
-  }
+    sequence = [Math.floor(Math.random() * 4) + 1];
+    animate(sequence);
+  } else {
   playerSequence = [];
   animate(sequence);
+}
 }
 function counter () {
   if ($('.counter').text() == "--") {
