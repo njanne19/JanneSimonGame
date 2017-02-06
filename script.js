@@ -52,7 +52,7 @@ function newRound() {
   lightUp(4);
   }
   /////////
-  if (eval($('.counter').text()) == 3) {
+  if (eval($('.counter').text()) == 20) {
     $('.fullGame').remove();
     $('.title').remove();
     $('.winScreen').attr('id', 'winScreenLit');
